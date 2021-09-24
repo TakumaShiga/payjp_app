@@ -25,9 +25,13 @@ const pay = () => {
       }
 
       document.getElementById("number").removeAttribute("name");
-      document.getElementById("cvc").removeAttribute("name")
-      document.getElementById("exp_month").removeAttribute("name")
+      document.getElementById("cvc").removeAttribute("name");
+      document.getElementById("exp_month").removeAttribute("name");
       document.getElementById("exp_year").removeAttribute("name");
+
+      document.getElementById("charge-form").submit();
     });
   });
 };
+
+window.addEventListener("load", pay);
