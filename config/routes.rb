@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'items#index'
   resources :users, only: [:show, :update]
-  resource :cards, only: [:new, :create]
+  resources :cards, only: [:new, :create]
+  resources :items, only: :order do
+    post 'order', on: :member
+  end
 end
